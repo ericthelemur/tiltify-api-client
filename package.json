@@ -1,6 +1,6 @@
 {
-  "name": "tiltify-api-client",
-  "version": "2.0.0",
+  "name": "@ericthelemur/tiltify-api-client",
+  "version": "2.1.0",
   "description": "A client for getting data from Tiltify",
   "main": "index.js",
   "scripts": {
@@ -10,13 +10,13 @@
   },
   "homepage": "https://daniellockard.github.io/tiltify-api-client/",
   "bugs": {
-    "url": "https://github.com/daniellockard/tiltify-api-client/issues"
+    "url": "https://github.com/ericthelemur/tiltify-api-client/issues"
   },
   "files": [
     "lib/",
     "index.js"
   ],
-  "repository": "github:daniellockard/tiltify-api-client",
+  "repository": "github:ericthelemur/tiltify-api-client",
   "author": "",
   "license": "Apache-2.0",
   "dependencies": {
