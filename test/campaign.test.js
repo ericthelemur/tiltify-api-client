@@ -9,7 +9,7 @@ describe('campaign tests -', () => {
 
   test('correct Tiltify campaign returned', done => {
     function callback (data) {
-      expect(data.amount_raised.value).toBe("220.00")
+      expect(data.amount_raised.value).toBe("425.00")
       done()
     }
     client.Campaigns.get('7099d7ba-cbce-40a6-8263-a5704d72b324', callback)

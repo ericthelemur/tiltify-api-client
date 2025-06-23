@@ -32,7 +32,7 @@ class TiltifyClient {
    * @param {string} clientSecret The Client Secret that you got from Tiltify.
    * @constructor
    */
-  constructor (clientID, clientSecret) {
+  constructor(clientID, clientSecret) {
     this.#clientID = clientID
     this.#clientSecret = clientSecret
     /**
@@ -186,21 +186,24 @@ class TiltifyClient {
       let results = []
       let keepGoing = true
       while (keepGoing) {
-        const response = (await this.parent._doRequest(path)).data
-        if (response.data) {
-          results = results.concat(response.data)
-  
-          if (response.metadata && response.metadata.after) {
+        const resp = await this.parent._doRequest(path);
+        if (!resp || resp.status != 200) return;
+
+        const data = resp.data.data;
+        if (data) {
+          results = results.concat(data)
+
+          if (resp.metadata && resp.metadata.after) {
             const url = 'https://temp.com/' + path // Combine the base URL and path
             const urlObj = new URL(url) // Create a URL object
-            urlObj.searchParams.set('after', response.metadata.after) // Set the 'after' query parameter
+            urlObj.searchParams.set('after', resp.metadata.after) // Set the 'after' query parameter
             const updatedPath = urlObj.pathname.replace('/', '') + urlObj.search // Get the updated path with query parameters. Remove first /
             path = updatedPath
             continue
           }
         }
-      keepGoing = false
-      callback(results)
+        keepGoing = false
+        callback(results)
       }
     } catch (e) {
       this.parent.errorParse(e, `Error sending request to ${path}`);

@@ -39,6 +39,7 @@ exports[`user tests correct Tiltify user campaigns returned 1`] = `
     "slug": "playing-games-for-charity",
     "status": "retired",
     "supporting_type": "private",
+    "team_campaign_id": null,
     "total_amount_raised": {
       "currency": "USD",
       "value": "36.00",
@@ -110,6 +111,7 @@ exports[`user tests correct Tiltify user campaigns returned 1`] = `
     "slug": "dannys-test-campaign",
     "status": "retired",
     "supporting_type": "private",
+    "team_campaign_id": null,
     "total_amount_raised": {
       "currency": "USD",
       "value": "0.00",
@@ -181,6 +183,7 @@ exports[`user tests correct Tiltify user campaigns returned 1`] = `
     "slug": "test",
     "status": "retired",
     "supporting_type": "private",
+    "team_campaign_id": null,
     "total_amount_raised": {
       "currency": "USD",
       "value": "0.00",
@@ -248,15 +251,16 @@ exports[`user tests correct Tiltify user campaigns returned 1`] = `
       "value": "100",
     },
     "published_at": "2024-12-06T01:00:05Z",
-    "retired_at": null,
+    "retired_at": "2025-06-04T07:30:01Z",
     "slug": "test-campaign-for-tests",
-    "status": "published",
+    "status": "retired",
     "supporting_type": "none",
+    "team_campaign_id": null,
     "total_amount_raised": {
       "currency": "USD",
       "value": "0.00",
     },
-    "updated_at": "2024-12-06T01:00:05Z",
+    "updated_at": "2025-06-04T07:30:01Z",
     "url": "/@ender3989/test-campaign-for-tests",
     "user": {
       "avatar": {
